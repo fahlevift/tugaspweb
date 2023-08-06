@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Form Pendaftaran</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bodyDaftar">
+    <section class="container">
+      <header>Registration Form</header>
+      <form action="home2.html" class="form">
+        <div class="input-box">
+          <label>Nama Lengkap </label>
+          <input type="text" placeholder="Nama Lengkap" required />
+        </div>
+
+        <div class="input-box">
+          <label>NISN</label>
+          <input type="text" placeholder="Nomor NISN" required />
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label>Nomor Telepon</label>
+            <input type="text" placeholder="Nomor Telepon" required />
+          </div>
+
+          <div class="input-box">
+            <label>Tanggal Lahir</label>
+            <input type="date" placeholder="Tanggal Lahir" required />
+          </div>
+        
+        </div>
+        <div class="gender-box">
+          <h3>Jenis Kelamin</h3>
+          <div class="gender-option">
+            <div class="gender">
+              <input type="radio" id="check-male" name="gender" checked />
+              <label for="check-male">Laki-Laki</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-female" name="gender" />
+              <label for="check-female">Perempuan</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-other" name="gender" />
+              <label for="check-other">Privasi</label>
+            </div>
+          </div>
+        </div>
+        <div class="input-box address">
+          <label>Alamat</label>
+          <input type="text" placeholder="Alamat Rumah" required />
+          <input type="text" placeholder="Alamat Rumah Lengkap" required />
+          <div class="column">
+            <div class="select-box">
+              <select>
+                <option hidden>Provinsi</option>
+                <option>Jawa Barat</option>
+                <option>Jawa Tengah</option>
+                <option>Jawa Timur</option>
+                <option>Jakarta</option>
+              </select>
+            </div>
+            <input type="text" placeholder="Kota" required />
+          </div>
+          <div class="column">
+            <input type="text" placeholder="Wilayah" required />
+            <input type="number" placeholder="Kode Pos" required />
+          </div>
+        </div>
+        <button>Daftar</button>
+      </form>
+    </section>
+  </body>
+</html>

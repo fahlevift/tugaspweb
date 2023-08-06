@@ -1,0 +1,326 @@
+/* Home.html */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.bodyHome{
+    background-image: url(siswa3.jpg);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+nav {
+    display: flex;
+    background-color: #91C8E4;
+    justify-content: space-around;
+    height: 90px;
+    align-items: center;
+}
+
+.logo {
+    padding-right: 500px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    color: #4682A9;
+    text-decoration: none;
+    font-size: 0.8em ;
+}
+
+nav ul li a:hover {
+    color: #fbfbfb;
+    transition: all 0.5s;
+}
+
+/* Toggle Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 42px;
+    height: 30px;
+    left: -7px;
+    top: -5px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #fbfbfb;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Toggle animation */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    transform:rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    transform:rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+
+/* Responsive */
+
+/* tab */
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 50%;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 576px) {
+    .menu-toggle{
+        display: flex;
+    }
+
+    nav ul {
+        position: absolute;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 80%;
+        top: 0;
+        height: 100vh;
+        background-color: #91C8E4;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.Pendaftaran {
+    padding-top: 140px;
+    padding-left: 20px;
+    font-size: 25px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.Pendaftaran p {
+    font-size: 20px;
+}
+
+#daftarbtn {
+    padding-left: 0px;
+    background-color: #19A7CE;
+    border-radius: 4px;
+    border: none;
+    color: #FFFFFF;
+    box-shadow: 0px 1px 8px #146C94;
+    cursor: pointer;
+    font-family: "Raleway SemiBold",sans-serif;
+    margin-top: 50px;
+    transition: 0.25s;
+    width: 120px;
+    height: 35px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+/* daftar.html */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.bodyDaftar {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #91C8E4;
+}
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.container header {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+}
+.container .form {
+  margin-top: 30px;
+}
+
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+.input-box label {
+  color: #333;
+}
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+.form .gender-box {
+  margin-top: 20px;
+}
+.gender-box h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.form :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.form .gender {
+  column-gap: 5px;
+}
+.gender input {
+  accent-color: rgb(130, 106, 251);
+}
+.form :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+.gender label {
+  color: #707070;
+}
+.address :where(input, .select-box) {
+  margin-top: 15px;
+}
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+.form button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #19A7CE;
+  border-radius: 11px;
+}
+.form button:hover {
+  background: #146C94;
+  transition: all 0.5s ease-in-out;
+}
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+}
+
+/* Program.html */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.bodyProgram {
+  background-color: #91C8E4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: absolute;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.programstudi {
+  display: flex;
+}
+
+.navbar_p {
+  width: 100%;
+  height: 80px;
+  background-image: linear-gradient(to bottom right, rgb(130, 106, 251), #91C8E4);
+}
+
+.teksgam1 {
+  font-size: 30px;
+  font-style: normal;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.teksgam2 {
+
+  font-size: 30px;
+  font-style: normal;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+ 
+  }
